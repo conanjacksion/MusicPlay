@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen"
+    android:orientation="vertical"
+    tools:context="com.hvph.musicplay.ui.activity.PlaybackActivity">
+
+    <RelativeLayout
+        android:id="@+id/filter_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_song_item_child_half_height"
+        android:background="@color/Black"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/text_view_filter_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/White" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#90000000"></FrameLayout>
+
+    <fragment
+        android:id="@+id/playback_fragment"
+        android:name="com.hvph.musicplay.ui.fragment.PlaybackFragmentFullSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

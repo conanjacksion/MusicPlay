@@ -1,0 +1,37 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="list_song_item_height">55dp</dimen>
+    <dimen name="list_song_item_child_width">55dp</dimen>
+    <dimen name="list_song_item_child_half_height">27.5dp</dimen>
+
+    <dimen name="list_genre_item_height">55dp</dimen>
+    <dimen name="list_genre_item_child_width">55dp</dimen>
+    <dimen name="list_genre_item_child_half_height">27.5dp</dimen>
+
+    <dimen name="list_folder_item_height">75dp</dimen>
+    <dimen name="list_folder_item_child_width">75dp</dimen>
+    <dimen name="list_folder_item_child_one_third_height">25dp</dimen>
+
+    <dimen name="grid_album_item_height">165dp</dimen>
+    <dimen name="grid_album_item_width">165dp</dimen>
+    <dimen name="grid_album_item_thumbnail_height">140dp</dimen>
+    <dimen name="grid_album_item_title_height">25dp</dimen>
+
+    <dimen name="screenplaying_linearlayout_control_play_height">100dp</dimen>
+    <dimen name="screenplaying_button_play">80dp</dimen>
+    <dimen name="screenplaying_button_prev_next_width">50dp</dimen>
+    <dimen name="screenplaying_button_prev_next_height">30dp</dimen>
+
+    <dimen name="playback_min_size_layout_height">80dp</dimen>
+    <dimen name="playback_min_size_thumbnail_height">60dp</dimen>
+    <dimen name="playback_min_size_thumbnail_width">60dp</dimen>
+
+    <dimen name="playback_full_size_layout_height">200dp</dimen>
+    <dimen name="playback_full_size_thumbnail_height">60dp</dimen>
+    <dimen name="playback_full_size_thumbnail_width">60dp</dimen>
+
+    <dimen name="custom_tab_indicator_height">50dp</dimen>
+</resources>

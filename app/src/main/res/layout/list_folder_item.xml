@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_folder_item_height"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/image_view_folder_thumbnail"
+        android:layout_width="@dimen/list_folder_item_child_width"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:padding="8dp"
+        android:src="@drawable/folder_thumbnail_default"/>
+    <TextView
+        android:id="@+id/txt_view_folder_name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/list_folder_item_child_one_third_height"
+        style="@style/list_item_title"
+        android:maxLines="1"
+        android:layout_toRightOf="@id/image_view_folder_thumbnail"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:id="@+id/txt_view_folder_path"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/list_folder_item_child_one_third_height"
+        style="@style/list_item_title"
+        android:maxLines="1"
+        android:layout_below="@id/txt_view_folder_name"
+        android:layout_toRightOf="@id/image_view_folder_thumbnail"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:id="@+id/txt_view_folder_song_count_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/list_folder_item_child_one_third_height"
+        android:layout_below="@id/txt_view_folder_path"
+        android:layout_toRightOf="@id/image_view_folder_thumbnail"
+        style="@style/list_item_sub_title"
+        android:text="@string/txt_view_folder_song_count_title"/>
+    <TextView
+        android:id="@+id/txt_view_folder_song_count"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/list_folder_item_child_one_third_height"
+        style="@style/list_item_sub_title"
+        android:layout_toRightOf="@id/txt_view_folder_song_count_title"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txt_view_folder_path"/>
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/list_item_line_bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/list_folder_item_child_width"
+        />
+</RelativeLayout>

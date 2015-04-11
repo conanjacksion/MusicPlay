@@ -1,0 +1,162 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/playback_full_size_layout_height"
+    android:background="@color/MP_grey"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.hvph.musicplay.ui.fragment.PlaybackFragmentFullSize">
+
+    <RelativeLayout
+        android:id="@+id/media_controller_container"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/background_1"
+        android:gravity="center">
+
+        <com.hvph.circleseekbar.HoloCircleSeekBar
+            android:id="@+id/seek_bar_volume"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerInParent="true"
+            app:end_angle="310"
+            app:init_position="50"
+            app:max="100"
+            app:pointer_color="#ffffff"
+            app:pointer_halo_color="#88252525"
+            app:pointer_size="10"
+            app:show_text="false"
+            app:start_angle="50"
+            app:text_color="#FF0000"
+            app:text_size="0"
+            app:wheel_active_color="#bc8d47"
+            app:wheel_size="3"
+            app:wheel_unactive_color="#000000" />
+
+        <ToggleButton
+            android:id="@+id/toggle_button_action_play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/playback_action_toggle_play_pause"
+            android:textOff=""
+            android:textOn=""
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@id/toggle_button_action_play_pause"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/image_button_action_previous_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/playback_action_previous" />
+
+            <ImageButton
+                android:id="@+id/image_button_action_repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_above="@id/image_button_action_previous_song"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/playback_action_repeat_off"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@id/toggle_button_action_play_pause">
+
+            <ImageButton
+                android:id="@+id/image_button_action_next_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/playback_action_next" />
+
+            <ToggleButton
+                android:id="@+id/toggle_button_action_shuffle"
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:layout_above="@id/image_button_action_next_song"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/playback_action_shuffle"
+                android:textOff=""
+                android:textOn="" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/playback_controller_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/seekbar_container_background_left">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:background="@drawable/seekbar_container_background_main"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_view_past_duration"
+                style="@style/list_item_duration"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="2:45" />
+
+            <SeekBar
+                android:id="@+id/seek_bar_duration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="6"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/custom_seekbar_progress"
+                android:thumb="@drawable/custom_seekbar_control"/>
+
+            <TextView
+                android:id="@+id/text_view_duration"
+                style="@style/list_item_duration"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="5:00" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/seekbar_container_background_right">
+
+        </FrameLayout>
+
+    </LinearLayout>
+</LinearLayout>

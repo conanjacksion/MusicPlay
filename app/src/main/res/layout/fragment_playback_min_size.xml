@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/playback_min_size_layout_height"
+    android:background="@drawable/mini_now_playing_bg"
+    android:gravity="center"
+    tools:context="com.hvph.musicplay.ui.fragment.PlaybackFragmentMinSize">
+
+    <ImageView
+        android:id="@+id/image_view_song_thumbnail"
+        android:layout_width="@dimen/playback_min_size_thumbnail_width"
+        android:layout_height="@dimen/playback_min_size_thumbnail_height"
+        android:layout_marginLeft="5dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/song_thumbnail_default"
+        android:layout_centerVertical="true"/>
+    <ImageButton
+        android:id="@+id/image_button_volume"
+        android:layout_width="@dimen/list_song_item_child_width"
+        android:layout_height="@dimen/list_song_item_height"
+        android:background="@color/OrangeRed"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="0dp"
+        android:src="@drawable/ic_action_volume_on"/>
+    <TextView
+        android:id="@+id/text_view_song_title"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_toLeftOf="@id/image_button_volume"
+        android:layout_toRightOf="@id/image_view_song_thumbnail"
+        android:gravity="center_horizontal"
+        android:textColor="@color/White" />
+
+    <RelativeLayout
+        android:id="@+id/media_controller_container"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_toLeftOf="@id/image_button_volume"
+        android:layout_below="@id/text_view_song_title"
+        android:layout_toRightOf="@id/image_view_song_thumbnail"
+        android:gravity="center_vertical">
+
+        <ToggleButton
+            android:id="@+id/toggle_button_action_play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_play_pause"
+            android:textOff=""
+            android:textOn="" />
+
+        <ImageButton
+            android:id="@+id/image_button_action_previous_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/toggle_button_action_play_pause"
+            android:background="@android:color/transparent"
+            android:src="@drawable/action_previous" />
+
+        <ImageButton
+            android:id="@+id/image_button_action_next_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/toggle_button_action_play_pause"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_action_next" />
+    </RelativeLayout>
+</RelativeLayout>
